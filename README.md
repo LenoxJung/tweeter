@@ -12,3 +12,6 @@ Tweeter is a simple, single-page Twitter clone.
 
 - Express
 - Node 5.10.x or above
+
+## Screenshot
+!["Screenshot of tweeter"](https://github.com/LenoxJung/tweeter/blob/master/docs/Screenshot.png)
