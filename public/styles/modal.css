@@ -1,0 +1,47 @@
+#login {
+  display: none;
+  padding-top: 70px;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.4); }
+  #login .modal-content {
+    border: 2px solid black;
+    width: 450px;
+    height: 150px;
+    margin: auto;
+    background-color: #00a087; }
+  #login form {
+    position: relative;
+    top: 25%;
+    width: 80%;
+    margin: auto; }
+    #login form input {
+      width: 100%;
+      float: left; }
+
+#register {
+  display: none;
+  padding-top: 70px;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.4); }
+  #register .modal-content {
+    border: 2px solid black;
+    width: 450px;
+    height: 150px;
+    margin: auto;
+    background-color: #00a087; }
+  #register form {
+    position: relative;
+    top: 15%;
+    width: 80%;
+    margin: auto; }
+    #register form input {
+      width: 100%;
+      float: left; }
+
+/*# sourceMappingURL=modal.css.map */

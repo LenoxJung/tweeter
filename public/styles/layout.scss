@@ -1,0 +1,20 @@
+html {
+  box-sizing: border-box;
+  body {
+    margin: 0;
+    color: #244751;
+    background-color: #eee;
+    font-family: 'Roboto', sans-serif;
+    .container {
+      width: 450px;
+      margin: auto;
+      padding-top: 140px;
+      background-color: white;
+      padding-bottom: 150px;
+    }
+  }
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}

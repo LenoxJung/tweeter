@@ -6,45 +6,58 @@ article.tweet {
   border-radius: 5px;
   background-color: white;
   position: relative;
-  height: 220px; }
-  article.tweet header {
+  height: 220px;
+  header {
     filter: opacity(70%);
     background-color: #eee;
-    padding-bottom: 70px; }
-    article.tweet header img {
+    padding-bottom: 70px;
+    img {
       float: left;
       border-radius: 5px;
       margin-left: 10px;
-      margin-top: 10px; }
-    article.tweet header h2 {
+      margin-top: 10px;
+    }
+    h2 {
       float: left;
       line-height: 30%;
-      margin-left: 10px; }
-  article.tweet footer {
+      margin-left: 10px;
+    }
+  }
+  footer {
     position: absolute;
     bottom: 0px;
     margin-left: 10px;
-    width: 374px; }
-    article.tweet footer p {
-      float: left; }
-    article.tweet footer img {
+    width: 374px;
+    p {
+      float: left;
+    }
+    img {
       visibility: hidden;
       float: right;
       margin-top: 15px;
-      margin-right: 10px; }
+      margin-right: 10px;
+    }
+  }
+}
 
 article.tweet:hover {
-  border: 1px solid grey; }
-  article.tweet:hover header {
-    filter: opacity(100%); }
-  article.tweet:hover footer img {
-    visibility: visible;
-    filter: opacity(20%); }
+  border: 1px solid grey;
+  header {
+    filter: opacity(100%);
+  }
+  footer {
+    img {
+      visibility: visible;
+      filter: opacity(20%)
+    }
+  }
+}
 
 article.tweet header > span {
   float: right;
   padding-top: 45px;
-  padding-right: 3px; }
+  padding-right: 3px;
+}
 
 article.tweet > span {
   float: left;
@@ -53,6 +66,5 @@ article.tweet > span {
   margin-top: 30px;
   margin-bottom: 30px;
   width: 355px;
-  overflow: auto; }
-
-/*# sourceMappingURL=tweet.css.map */
+  overflow: auto;
+}

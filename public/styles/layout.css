@@ -1,25 +1,18 @@
 html {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
+  html body {
+    margin: 0;
+    color: #244751;
+    background-color: #eee;
+    font-family: 'Roboto', sans-serif; }
+    html body .container {
+      width: 450px;
+      margin: auto;
+      padding-top: 140px;
+      background-color: white;
+      padding-bottom: 150px; }
+
 *, *:before, *:after {
-  box-sizing: inherit;
-}
+  box-sizing: inherit; }
 
-/*
- * Global layout stuff
- */
-
-body {
-  margin: 0;
-  color: #244751;
-  background-color: #eee;
-  font-family: 'Roboto', sans-serif;
-}
-
-.container {
-  width: 450px;
-  margin: auto;
-  padding-top: 140px;
-  background-color: white;
-  padding-bottom: 150px;
-}
+/*# sourceMappingURL=layout.css.map */

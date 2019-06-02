@@ -12,7 +12,8 @@ module.exports = function(DataHelpers) {
       if (err) {
         res.status(500).json({ error: err.message });
       } else {
-        res.json(tweets);
+        const sortNewestFirst = (a, b) => a.created_at - b.created_at;
+        res.json(tweets.sort(sortNewestFirst));
       }
     });
   });
@@ -23,7 +24,7 @@ module.exports = function(DataHelpers) {
       return;
     }
 
-    const user = req.body.user ? req.body.user : userHelper.generateRandomUser();
+    const user = req.session["user"] ? req.session["user"] : userHelper.generateRandomUser();
     const tweet = {
       user: user,
       content: {
@@ -36,7 +37,7 @@ module.exports = function(DataHelpers) {
       if (err) {
         res.status(500).json({ error: err.message });
       } else {
-        res.status(201).send();
+        res.status(201).send(tweet);
       }
     });
   });

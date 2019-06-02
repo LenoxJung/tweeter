@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/modal.css" type="text/css">
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <script type="text/javascript" src="/scripts/app.js"></script>
@@ -20,8 +21,33 @@
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
-      <button>Compose</button>
+      <div class="login"><img src="/images/login.svg"><p>Login</p></div>
+      <div class="register"><img src="/images/register.svg"><p>Register</p></div>
+      <div class="logout"><img src="/images/logout.svg"><p>Logout</p></div>
+      <div class="compose"><img src="/images/compose.svg"><p>Compose</p></div>
     </nav>
+
+    <div id="login" class="modal">
+      <div class="modal-content">
+        <form action="/users/" method="POST">
+          <input type="text" placeholder="username" name="name">
+          <input type="password" placeholder="password" name="password">
+          <input type="submit" value="Login">
+        </form>
+      </div>
+    </div>
+
+    <div id="register" class="modal">
+      <div class="modal-content">
+        <form action="/users/" method="POST">
+          <input type="text" placeholder="username" name="name">
+          <input type="text" placeholder="@handle" name="handle">
+          <input type="password" placeholder="password" name="password">
+          <input type="submit" value="Register">
+        </form>
+      </div>
+    </div>
+
 
     <main class="container">
       <section class="new-tweet">

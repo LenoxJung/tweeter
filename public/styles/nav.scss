@@ -10,17 +10,19 @@
   padding-right: 2em;
   padding-left: 2em;
   z-index: 1;
-  overflow: hidden; }
-  #nav-bar .logo {
+  overflow: hidden;
+  .logo {
     width: 80px;
     height: 80px;
-    float: left; }
-  #nav-bar .header {
+    float: left;
+  }
+  .header {
     float: left;
     padding-left: 10px;
     font-size: 200%;
-    line-height: 250%; }
-  #nav-bar .logout {
+    line-height: 250%;
+  }
+  .logout {
     display: none;
     height: 50px;
     width: 110px;
@@ -30,17 +32,21 @@
     margin-top: 15px;
     color: #00a087;
     border: 1px solid black;
-    border-radius: 3px; }
-    #nav-bar .logout img {
+    border-radius: 3px;
+    img {
       padding-left: 5px;
       float: left;
-      padding-top: 10px; }
-    #nav-bar .logout p {
+      padding-top: 10px;
+    }
+    p {
       padding-left: 12px;
-      float: left; }
-  #nav-bar .logout:hover {
-    color: black; }
-  #nav-bar .login {
+      float: left;
+    }
+  }
+  .logout:hover {
+    color: black;
+  }
+  .login {
     height: 50px;
     width: 110px;
     cursor: pointer;
@@ -49,17 +55,21 @@
     margin-top: 15px;
     color: #00a087;
     border: 1px solid black;
-    border-radius: 3px; }
-    #nav-bar .login img {
+    border-radius: 3px;
+    img {
       padding-left: 5px;
       float: left;
-      padding-top: 10px; }
-    #nav-bar .login p {
+      padding-top: 10px;
+    }
+    p {
       padding-left: 12px;
-      float: left; }
-  #nav-bar .login:hover {
-    color: black; }
-  #nav-bar .register {
+      float: left;
+    }
+  }
+  .login:hover {
+    color: black;
+  }
+  .register {
     margin-right: 5px;
     height: 50px;
     width: 110px;
@@ -69,17 +79,21 @@
     margin-top: 15px;
     color: #00a087;
     border: 1px solid black;
-    border-radius: 3px; }
-    #nav-bar .register img {
+    border-radius: 3px;
+    img {
       padding-left: 5px;
       float: left;
-      padding-top: 10px; }
-    #nav-bar .register p {
+      padding-top: 10px;
+    }
+    p {
       padding-left: 12px;
-      float: left; }
-  #nav-bar .register:hover {
-    color: black; }
-  #nav-bar .compose {
+      float: left;
+    }
+  }
+  .register:hover {
+    color: black;
+  }
+  .compose {
     display: none;
     margin-right: 5px;
     height: 50px;
@@ -90,15 +104,18 @@
     margin-top: 15px;
     color: #00a087;
     border: 1px solid black;
-    border-radius: 3px; }
-    #nav-bar .compose img {
+    border-radius: 3px;
+    img {
       padding-left: 5px;
       float: left;
-      padding-top: 10px; }
-    #nav-bar .compose p {
+      padding-top: 10px;
+    }
+    p {
       padding-left: 3px;
-      float: left; }
-  #nav-bar .compose:hover {
-    color: black; }
-
-/*# sourceMappingURL=nav.css.map */
+      float: left;
+    }
+  }
+  .compose:hover {
+    color: black;
+  }
+}
