@@ -1,6 +1,6 @@
 "use strict";
 
-const userHelper    = require("../lib/util/user-helper")
+const userHelper    = require("../lib/util/user-helper");
 
 const express       = require('express');
 const tweetsRoutes  = express.Router();
@@ -13,7 +13,7 @@ module.exports = function(DataHelpers) {
         res.status(500).json({ error: err.message });
       } else {
         const sortNewestFirst = (a, b) => a.created_at - b.created_at;
-        res.json(tweets.sort(sortNewestFirst));
+        res.json({tweets: tweets.sort(sortNewestFirst), user: req.session["user"] || {}});
       }
     });
   });
@@ -30,14 +30,26 @@ module.exports = function(DataHelpers) {
       content: {
         text: req.body.text
       },
-      created_at: Date.now()
+      created_at: Date.now(),
+      likes: {}
     };
 
     DataHelpers.saveTweet(tweet, (err) => {
       if (err) {
         res.status(500).json({ error: err.message });
       } else {
-        res.status(201).send(tweet);
+        res.status(201).send({tweet: tweet, user: req.session || {} });
+      }
+    });
+  });
+
+  tweetsRoutes.put("/", function(req, res) {
+    DataHelpers.likeTweet(req.body.id, req.session["user"], (err, result) => {
+      if (err) {
+        res.status(500).json({ error: err.message });
+      } else {
+        console.log(result);
+        res.status(201).send();
       }
     });
   });

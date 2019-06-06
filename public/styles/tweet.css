@@ -32,14 +32,15 @@ article.tweet {
       float: right;
       margin-top: 15px;
       margin-right: 10px; }
+    article.tweet footer .count {
+      visibility: hidden;
+      padding-right: 10px;
+      float: right; }
 
 article.tweet:hover {
   border: 1px solid grey; }
   article.tweet:hover header {
     filter: opacity(100%); }
-  article.tweet:hover footer img {
-    visibility: visible;
-    filter: opacity(20%); }
 
 article.tweet header > span {
   float: right;

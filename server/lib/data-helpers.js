@@ -1,5 +1,6 @@
 "use strict";
 
+const ObjectId = require('mongodb').ObjectID;
 const simulateDelay = require("./util/simulate-delay");
 
 module.exports = function makeDataHelpers(db) {
@@ -11,7 +12,13 @@ module.exports = function makeDataHelpers(db) {
 
     getTweets: function(callback) {
       db.collection("tweets").find().toArray(callback);
-    }
+    },
 
+    likeTweet: function(id, user, callback) {
+      db.collection("tweets").findOne({ _id: ObjectId(id) }).then(function(result) {
+        result.likes[user.name] = true;
+        db.collection("tweets").updateOne({ _id: ObjectId(id) }, { $set: { likes: result.likes } }, callback);
+      });
+    }
   };
 }

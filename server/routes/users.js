@@ -19,7 +19,7 @@ module.exports = function(UserHelpers) {
           res.status(500).json({ error: err.message });
         }
         else {
-          req.session["user"] = { id: result.insertedId, name: req.body.name, handle: req.body.handle, avatars: avatars };
+          req.session["user"] = { name: req.body.name, handle: req.body.handle, avatars: avatars };
           res.status(201).send();
         }
       });
@@ -29,7 +29,7 @@ module.exports = function(UserHelpers) {
         if (err) {
           res.status(500).json({ error: err.message });
         } else {
-          req.session["user"] = { id: result._id, name: result.name, handle: result.handle, avatars: result.avatars };
+          req.session["user"] = { name: result.name, handle: result.handle, avatars: result.avatars };
           res.status(200).send();
         }
       });

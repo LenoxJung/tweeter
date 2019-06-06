@@ -37,6 +37,11 @@ article.tweet {
       margin-top: 15px;
       margin-right: 10px;
     }
+    .count {
+      visibility: hidden;
+      padding-right: 10px;
+      float: right;
+    }
   }
 }
 
@@ -44,12 +49,6 @@ article.tweet:hover {
   border: 1px solid grey;
   header {
     filter: opacity(100%);
-  }
-  footer {
-    img {
-      visibility: visible;
-      filter: opacity(20%)
-    }
   }
 }
 
