@@ -17,9 +17,16 @@ $(document).ready(function() {
     `);
     $tweet.find('.like').click(function() {
       if (tweet.user.name == user["name"] || !user.name) return;
-      $tweet.find('.like').css("visibility", "visible").css("filter", "opacity(100%)");
-      $tweet.find('.count').css("visibility", "visible").text(Object.keys(tweet.likes).length + 1);
-      tweet.likes[user["name"]] = true;
+      else if (tweet.likes[user["name"]]) {
+        $tweet.find('.like').css("visibility", "hidden").css("filter", "opacity(20%)");
+        $tweet.find('.count').css("visibility", "hidden").text(Object.keys(tweet.likes).length - 1);
+        tweet.likes[user["name"]] = false;
+      }
+      else {
+        $tweet.find('.like').css("visibility", "visible").css("filter", "opacity(100%)");
+        $tweet.find('.count').css("visibility", "visible").text(Object.keys(tweet.likes).length + 1);
+        tweet.likes[user["name"]] = true;
+      }
       $.ajax({ url: '/tweets', type: 'PUT', data: { id: tweet._id } });
     });
     $tweet.hover(function() {

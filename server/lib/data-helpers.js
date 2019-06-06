@@ -16,7 +16,8 @@ module.exports = function makeDataHelpers(db) {
 
     likeTweet: function(id, user, callback) {
       db.collection("tweets").findOne({ _id: ObjectId(id) }).then(function(result) {
-        result.likes[user.name] = true;
+        if (result.likes[user.name]) delete result.likes[user.name];
+        else result.likes[user.name] = true;
         db.collection("tweets").updateOne({ _id: ObjectId(id) }, { $set: { likes: result.likes } }, callback);
       });
     }
